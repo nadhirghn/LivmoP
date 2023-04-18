@@ -40,6 +40,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  },
-  "proxy": "https://livmo.herokuapp.com/"
+  }
 }
