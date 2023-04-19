@@ -56,6 +56,12 @@ app.use('/api/v1', experience);
 
 
 
+app.use(express.static('client/build'))
+app.get('*', (req,res)=>{
+    res.sendFile(__dirname+'/client/build/index.html')
+})
+
+
 
 
 
