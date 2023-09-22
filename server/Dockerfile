@@ -2,7 +2,7 @@
 FROM node:18-alpine
 
 # Set the working directory inside the container
-WORKDIR /server
+WORKDIR /app/server
 
 # Copy package.json and package-lock.json to the container
 COPY package*.json ./
