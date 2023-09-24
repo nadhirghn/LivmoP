@@ -1,4 +1,3 @@
----
 version: "3"
 services:
   backend:
@@ -9,8 +8,8 @@ services:
       - 5000:5000
     environment:
       MONGO_URI: mongodb+srv://rimkhedher:rimkhedher123123@atlascluster.2kib5iz.mongodb.net/test
-      networks:
-        - my-network
+    networks:
+      - my-network
   frontend:
     build:
       context: ./client
