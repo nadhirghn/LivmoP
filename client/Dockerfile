@@ -6,6 +6,7 @@ WORKDIR /app/client
 
 # Copy package.json and package-lock.json to the container
 COPY package*.json ./
+ENV PYTHON /usr/bin/python3
 
 # Install app dependencies
 RUN npm install
