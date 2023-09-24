@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+environment {
+        PYTHON = '/usr/bin/python3' // Adjust the path as needed
+    }
     stages {
         stage('Checkout') {
             steps {
