@@ -15,7 +15,7 @@ pipeline {
                         sh 'docker --version'
                         
                         // Check if Docker Compose is installed and accessible
-                        sh 'docker-compose version'
+sh '/usr/local/bin/docker-compose --version'
                         
                     
                 }
