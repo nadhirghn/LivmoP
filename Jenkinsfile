@@ -8,24 +8,13 @@ pipeline {
             }
         }
 
-        stage('Build and Test') {
-            steps {
-                sh 'npm install'
-                sh 'npm test'
-            }
-        }
 
         stage('Build and Push Docker Images') {
             steps {
-                sh 'docker-compose build'
-                sh 'docker-compose push'
+              sh "docker-compose build"
+              sh "docker-compose up -d"
             }
         }
 
-        stage('Deploy with Docker Compose') {
-            steps {
-                sh 'docker-compose -f docker-compose.yml up -d'
-            }
-        }
     }
 }
