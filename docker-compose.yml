@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     container_name: api_backend
     ports:
-      - '6000:6000'
+      - '8081:3000'
     networks:
       - shared-network
   client:
@@ -13,7 +13,7 @@ services:
     build: ./client
     container_name: app_frontend
     ports:
-      - '7000:80'
+      - '8443:80'
     networks:
       - shared-network
     depends_on:
