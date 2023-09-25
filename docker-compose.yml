@@ -20,4 +20,4 @@ services:
       - server
 networks:
   shared-network:
-    drive: bridge
+    driver: bridge
