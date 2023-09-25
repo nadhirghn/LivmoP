@@ -1,23 +1,22 @@
-version: "3"
+version: '3.8'
 services:
-  backend:
-    build:
-      context: ./server
-    container_name: backend
+  server:
+    build: ./server
+    restart: unless-stopped
+    container_name: api_backend
     ports:
-      - 5000:5000
-    environment:
-      MONGO_URI: mongodb+srv://rimkhedher:rimkhedher123123@atlascluster.2kib5iz.mongodb.net/test
+      - '3000:3000'
     networks:
-      - my-network
-  frontend:
-    build:
-      context: ./client
-    container_name: frontend
+      - shared-network
+  client:
+    stdin_open: true
+    build: ./client
+    container_name: app_frontend
     ports:
-      - 3000:3000
+      - '80:3000'
     networks:
-      - my-network
+      - shared-network
+    depends_on:
+      - server
 networks:
-  my-network:
-    driver: bridge
+  shared-network:
