@@ -14,12 +14,9 @@ services:
     container_name: app_frontend
     ports:
       - '4000:4000'
-    extra_hosts:
-      - "104.197.89.109:4000"  
     networks:
       - shared-network
     depends_on:
       - server
 networks:
   shared-network:
-    driver: bridge
