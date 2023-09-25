@@ -4,8 +4,6 @@ services:
     build: ./server
     restart: unless-stopped
     container_name: api_backend
-    extra_hosts:
-      - "10.128.0.4:5000"
     ports:
       - '5000:5000'
     networks:
@@ -15,7 +13,7 @@ services:
     build: ./client
     container_name: app_frontend
     extra_hosts:
-      - "10.128.0.4:4000"
+      - "104.197.89.109:4000"
     ports:
       - '4000:4000'
     networks:
