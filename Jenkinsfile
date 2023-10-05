@@ -42,7 +42,7 @@ sh '/usr/local/bin/docker-compose --version'
         script {
             // Log in to Docker Hub with your Docker Hub username and access token
             sh 'docker login -u livmo -p dckr_pat_kNb_Fd8a08r_lWQwytcwMN0vADI'
-            sh "docker push livmo/git_integraion_client:latest"
+            sh "docker push livmo/git_integraion_server:latest"
 
         }
     }
