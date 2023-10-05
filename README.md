@@ -1,5 +1,5 @@
 /# Livmo Deployment
-
+test
 ## Introduction
 
 This documentation will go through launching and deploying a Livmo Node.js application with a client-server model. This documentation will guide you through the process of setting up the application on an AWS EC2 instance, installing Docker and Docker Compose, cloning the directory, and running the application.
