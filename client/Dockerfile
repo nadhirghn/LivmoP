@@ -11,6 +11,12 @@ RUN apk add --no-cache python3 make g++
 # Install app dependencies
 RUN npm install
 
+# Install necessary tools or dependencies
+RUN apt-get update && apt-get install -y curl
+
+# Health check command
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 CMD curl --fail https://www.google.com || exit 1
+
 # Copy the rest of the application code to the container
 COPY . .
 
