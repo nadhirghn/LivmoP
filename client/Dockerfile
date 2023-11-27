@@ -12,7 +12,7 @@ RUN apk add --no-cache python3 make g++
 RUN npm install
 
 # Install necessary tools or dependencies
-RUN apt-get update && apt-get install -y curl
+RUN apk update && apk add --no-cache curl
 
 # Health check command
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 CMD curl --fail https://www.google.com || exit 1
