@@ -15,7 +15,7 @@ RUN npm install
 RUN apk update && apk add --no-cache curl
 
 # Health check command
-HEALTHCHECK --interval=30s --timeout=10s --retries=3 CMD curl --fail https://www.google.com || exit 1
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 CMD curl --fail http://34.173.2.98:8443 || exit 1
 
 # Copy the rest of the application code to the container
 COPY . .
